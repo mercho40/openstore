@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { X, Upload, Image as ImageIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { uploadImage, validateImageFile } from '@/lib/blob'
+import { uploadImage, validateImageFile } from '@/actions/upload'
 import Image from 'next/image'
 
 interface ImageUploadProps {
@@ -30,8 +30,8 @@ export function ImageUpload({
   const [uploadProgress, setUploadProgress] = useState(0)
   const [error, setError] = useState<string | null>(null)
 
-  const currentImages = useMemo(() => 
-    Array.isArray(value) ? value : value ? [value] : [], 
+  const currentImages = useMemo(() =>
+    Array.isArray(value) ? value : value ? [value] : [],
     [value]
   )
 
@@ -57,7 +57,7 @@ export function ImageUpload({
           return
         }
 
-        const filesToUpload = multiple 
+        const filesToUpload = multiple
           ? validFiles.slice(0, maxFiles - currentImages.length)
           : [validFiles[0]]
 
@@ -105,7 +105,7 @@ export function ImageUpload({
     }
   }
 
-  const canUploadMore = multiple 
+  const canUploadMore = multiple
     ? currentImages.length < maxFiles
     : currentImages.length === 0
 
