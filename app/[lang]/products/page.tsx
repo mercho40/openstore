@@ -70,13 +70,10 @@ async function ProductsGrid({ lang }: { lang: Lang }) {
 
 export default async function ProductsPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ lang: Lang }>;
-  searchParams: Promise<{ category?: string; search?: string }>;
 }) {
   const { lang } = await params;
-  const searchParamsData = await searchParams;
   const dict = await getDictionary(lang);
 
   return (

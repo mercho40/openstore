@@ -31,7 +31,7 @@ function CollectionCardSkeleton() {
 
 async function CollectionsGrid({ lang }: { lang: Lang }) {
   const collections = await getCollections({ isActive: true }, 20, 0, "createdAt", "desc");
-  const dict = await getDictionary(lang);
+  // const dict = await getDictionary(lang); // TODO: Use dict for translations
 
   if (collections.length === 0) {
     return (

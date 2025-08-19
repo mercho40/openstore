@@ -1,4 +1,4 @@
-import { getDictionary, Lang, locales } from "@/actions/dictionaries";
+import { Lang, locales } from "@/actions/dictionaries";
 import { getProducts, getProductBySlug, getProductsByCategory } from "@/actions/products";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -31,7 +31,8 @@ export async function generateStaticParams() {
 // Note: We'll use the action directly instead of wrapping it
 
 // Simplified for now - we'll implement reviews actions later
-async function getProductReviews(productId: string) {
+async function getProductReviews() {
+  // TODO: Implement product reviews functionality
   return { reviews: [], averageRating: 0, totalReviews: 0 };
 }
 
@@ -81,7 +82,7 @@ export default async function ProductPage({
   params: Promise<{ lang: Lang; slug: string }>;
 }) {
   const { lang, slug } = await params;
-  const dict = await getDictionary(lang);
+  // const dict = await getDictionary(lang); // TODO: Use dict for translations
 
   const productData = await getProductBySlug(slug);
 
@@ -90,7 +91,7 @@ export default async function ProductPage({
   }
 
   const [reviewsData, allRelatedProducts] = await Promise.all([
-    getProductReviews(productData.id),
+    getProductReviews(),
     productData.categoryId ? getProductsByCategory(productData.categoryId, 8, 0) : Promise.resolve([]),
   ]);
 

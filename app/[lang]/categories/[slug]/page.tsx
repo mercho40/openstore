@@ -33,12 +33,10 @@ export async function generateStaticParams() {
 
 async function CategoryProductsGrid({ 
   categoryId, 
-  lang, 
-  sortBy 
+  lang 
 }: { 
   categoryId: string; 
   lang: Lang; 
-  sortBy?: string;
 }) {
   const products = await getProductsByCategory(categoryId, 20, 0);
   const dict = await getDictionary(lang);
@@ -108,13 +106,10 @@ export async function generateMetadata({
 
 export default async function CategoryPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ lang: Lang; slug: string }>;
-  searchParams: Promise<{ sort?: string }>;
 }) {
   const { lang, slug } = await params;
-  const { sort } = await searchParams;
 
   const categoryData = await getCategoryBySlug(slug);
 
@@ -163,7 +158,6 @@ export default async function CategoryPage({
         <CategoryProductsGrid 
           categoryId={categoryData.id} 
           lang={lang}
-          sortBy={sort}
         />
       </Suspense>
     </div>
