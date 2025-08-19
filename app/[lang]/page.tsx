@@ -1,7 +1,13 @@
-import { getDictionary, Lang, locales } from "@/actions/dictionaries"
-import Link from 'next/link'
+import { getDictionary, Lang, locales } from "@/actions/dictionaries";
+import { CategoriesShowcase } from "@/components/home/categories-showcase";
+import { CollectionsShowcase } from "@/components/home/collections-showcase";
+import { FeaturedProducts } from "@/components/home/featured-products";
+import { HeroSection } from "@/components/home/hero-section";
+import { NewsletterSignup } from "@/components/home/newsletter-signup";
+import { StatsSection } from "@/components/home/stats-section";
 
-export const dynamic = "force-static" // Force static generation for this page
+// Enable ISR with 1 hour revalidation for home page to get fresh product data
+export const revalidate = 3600; // 1 hour
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -14,12 +20,16 @@ export default async function Home({
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
+  
   return (
-    <main className="flex min-h-[100dvh] flex-col items-center justify-center p-4 gap-4">
-      <div className="flex flex-col items-center gap-2">
-        <Link href="/auth/signin">{dict.auth.account}</Link>
-      </div>
+    <main className="min-h-screen">
+      <HeroSection dict={{ hero: dict.home.hero }} lang={lang} />
+      <FeaturedProducts dict={{ featured: dict.home.featured, product: dict.product }} lang={lang} />
+      <CategoriesShowcase dict={{ categories: dict.home.categories }} lang={lang} />
+      <StatsSection dict={{ stats: dict.home.stats }} />
+      <CollectionsShowcase dict={{ collections: dict.home.collections }} lang={lang} />
+      <NewsletterSignup dict={{ newsletter: dict.home.newsletter }} />
     </main>
-  )
+  );
 }
 

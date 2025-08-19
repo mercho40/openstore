@@ -55,5 +55,83 @@
     "genericError": "An error occurred. Please try again later.",
     "ohno": "Oh no!",
     "somethingWentWrong": "Something went wrong. Please try again later."
+  },
+  "home": {
+    "hero": {
+      "title": "Discover Amazing Products",
+      "subtitle": "Find everything you need in our curated collection of premium products",
+      "cta": "Shop Now",
+      "browse": "Browse Categories"
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Handpicked items that our customers love",
+      "viewAll": "View All Products",
+      "addToCart": "Add to Cart",
+      "outOfStock": "Out of Stock",
+      "sale": "Sale"
+    },
+    "categories": {
+      "title": "Shop by Category",
+      "subtitle": "Explore our diverse range of product categories",
+      "viewAll": "View All Categories",
+      "productsCount": "{{count}} products"
+    },
+    "collections": {
+      "title": "Curated Collections",
+      "subtitle": "Specially selected product collections for every occasion",
+      "viewAll": "View All Collections",
+      "explore": "Explore Collection"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Subscribe to our newsletter for the latest products and exclusive offers",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "Please enter a valid email address"
+    },
+    "stats": {
+      "products": "Products",
+      "categories": "Categories",
+      "customers": "Happy Customers",
+      "orders": "Orders Shipped"
+    }
+  },
+  "product": {
+    "price": "Price",
+    "comparePrice": "Compare at",
+    "sku": "SKU",
+    "category": "Category",
+    "tags": "Tags",
+    "description": "Description",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "quantity": "Quantity",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "lowStock": "Only {{count}} left",
+    "viewDetails": "View Details"
+  },
+  "categories": {
+    "noProducts": "No products in this category",
+    "checkOtherCategories": "Check out other categories or try again later."
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Discover our amazing collection of products",
+    "noProducts": "No products available",
+    "checkBackLater": "Check back later for new products."
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "collections": "Collections",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "search": "Search products...",
+    "menu": "Menu"
   }
 }

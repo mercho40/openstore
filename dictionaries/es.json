@@ -55,5 +55,83 @@
     "genericError": "Ocurrió un error. Por favor, intenta más tarde.",
     "ohno": "¡Oh no!",
     "somethingWentWrong": "Algo salió mal. Por favor, intenta más tarde."
+  },
+  "home": {
+    "hero": {
+      "title": "Descubre Productos Increíbles",
+      "subtitle": "Encuentra todo lo que necesitas en nuestra colección curada de productos premium",
+      "cta": "Comprar Ahora",
+      "browse": "Explorar Categorías"
+    },
+    "featured": {
+      "title": "Productos Destacados",
+      "subtitle": "Artículos seleccionados que nuestros clientes adoran",
+      "viewAll": "Ver Todos los Productos",
+      "addToCart": "Añadir al Carrito",
+      "outOfStock": "Agotado",
+      "sale": "Oferta"
+    },
+    "categories": {
+      "title": "Comprar por Categoría",
+      "subtitle": "Explora nuestra diversa gama de categorías de productos",
+      "viewAll": "Ver Todas las Categorías",
+      "productsCount": "{{count}} productos"
+    },
+    "collections": {
+      "title": "Colecciones Curadas",
+      "subtitle": "Colecciones de productos especialmente seleccionadas para cada ocasión",
+      "viewAll": "Ver Todas las Colecciones",
+      "explore": "Explorar Colección"
+    },
+    "newsletter": {
+      "title": "Mantente Actualizado",
+      "subtitle": "Suscríbete a nuestro boletín para recibir los últimos productos y ofertas exclusivas",
+      "placeholder": "Ingresa tu email",
+      "subscribe": "Suscribirse",
+      "success": "¡Gracias por suscribirte!",
+      "error": "Por favor ingresa una dirección de email válida"
+    },
+    "stats": {
+      "products": "Productos",
+      "categories": "Categorías",
+      "customers": "Clientes Satisfechos",
+      "orders": "Pedidos Enviados"
+    }
+  },
+  "product": {
+    "price": "Precio",
+    "comparePrice": "Comparar en",
+    "sku": "SKU",
+    "category": "Categoría",
+    "tags": "Etiquetas",
+    "description": "Descripción",
+    "addToCart": "Añadir al Carrito",
+    "buyNow": "Comprar Ahora",
+    "quantity": "Cantidad",
+    "inStock": "En Stock",
+    "outOfStock": "Agotado",
+    "lowStock": "Solo quedan {{count}}",
+    "viewDetails": "Ver Detalles"
+  },
+  "categories": {
+    "noProducts": "No hay productos en esta categoría",
+    "checkOtherCategories": "Revisa otras categorías o intenta más tarde."
+  },
+  "products": {
+    "title": "Productos",
+    "subtitle": "Descubre nuestra increíble colección de productos",
+    "noProducts": "No hay productos disponibles",
+    "checkBackLater": "Vuelve más tarde para ver nuevos productos."
+  },
+  "navigation": {
+    "home": "Inicio",
+    "products": "Productos",
+    "categories": "Categorías",
+    "collections": "Colecciones",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "cart": "Carrito",
+    "search": "Buscar productos...",
+    "menu": "Menú"
   }
 }
