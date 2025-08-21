@@ -6,14 +6,15 @@ export default async function LangLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: Lang }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const validLang: Lang = (lang === 'es' ? 'es' : 'en');
+  const dict = await getDictionary(validLang);
 
   return (
     <>
-      <Navigation dict={{ navigation: dict.navigation, auth: dict.auth }} lang={lang} />
+      <Navigation dict={{ navigation: dict.navigation, auth: dict.auth }} lang={validLang} />
       {children}
     </>
   );

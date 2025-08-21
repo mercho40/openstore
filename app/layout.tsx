@@ -5,7 +5,6 @@ import { Toaster } from "sonner"
 import { ThemeProvider } from "@/components/primitives/theme-provider"
 
 import { baseUrl } from '@/lib/utils';
-import { Lang } from "@/actions/dictionaries";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: process.env.APP_NAME || "eBeast",
+  title: process.env.APP_NAME || "OpenStore",
   robots: {
     follow: true,
     index: true
@@ -28,14 +27,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: Lang }>
 }>) {
-  const { lang } = await params;
   return (
-    <html lang={lang} >
+    <html lang="en" >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-[100dvh]`}
       >

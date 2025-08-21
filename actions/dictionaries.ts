@@ -10,4 +10,4 @@ export const getDictionary = async (locale: 'en' | 'es') =>
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>
 
 export const locales = Object.keys(dictionaries) as Array<keyof typeof dictionaries>;
-export type Lang = (typeof locales)[number];
+export type Lang = 'en' | 'es';
