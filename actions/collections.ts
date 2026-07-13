@@ -80,7 +80,7 @@ export const getCollections = async (
 
   const orderDirection = sortOrder === "asc" ? asc : desc;
   let orderByClause;
-  
+
   switch (sortBy) {
     case "name":
       orderByClause = [orderDirection(collection.name)];
@@ -92,7 +92,7 @@ export const getCollections = async (
       orderByClause = [orderDirection(collection.createdAt)];
   }
 
-  return await db
+  const collections = await db
     .select({
       id: collection.id,
       name: collection.name,
@@ -109,6 +109,7 @@ export const getCollections = async (
     .orderBy(...orderByClause)
     .limit(limit)
     .offset(offset);
+  return collections;
 };
 
 export const getCollectionsWithProductCount = async (filters: CollectionFilters = {}) => {

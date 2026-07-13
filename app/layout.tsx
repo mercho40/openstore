@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner"
-import { ThemeProvider } from "@/components/primitives/theme-provider"
+// import { ThemeProvider } from "@/components/primitives/theme-provider"
 
 import { baseUrl } from '@/lib/utils';
 
@@ -35,16 +35,16 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-[100dvh]`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          storageKey="eBeast-theme"
-        >
-          {children}
-          <Toaster richColors position="top-right" />
-        </ThemeProvider>
+        {/* <ThemeProvider */}
+        {/*   attribute="class" */}
+        {/*   defaultTheme="system" */}
+        {/*   enableSystem */}
+        {/*   disableTransitionOnChange */}
+        {/*   storageKey="eBeast-theme" */}
+        {/* > */}
+        {children}
+        <Toaster richColors position="top-right" />
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
